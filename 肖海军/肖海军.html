@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>响应式</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content:"";
+            clear: both;
+            display: block;
+            height: 0;
+        }
+        main{
+            width: 1000px;
+            background-color: pink;
+            margin: 0 auto;
+            padding:0 20px;
+        }
+        header{
+           width: 100%; 
+           padding: 20px 0;
+        }
+        nav{
+            width: 100%;
+            height: 50px;
+            background-color: black;
+        }
+        .btn{
+            width: 80px;
+            height: 30px;
+            border:1px solid #fff;
+            color: #fff;
+            border-radius: 5px;
+            background-color: black;
+            margin-top: 10px;
+            margin-left: 20px;
+            float: left;
+            display:none;
+        }
+        nav ul{
+            width: 70%;
+            height: 50px;
+            float: left;
+        }
+        nav ul li{
+            float: left;
+            list-style: none;
+            text-align: center;
+            color: #fff;
+            font-size: 22px;
+            font-weight: bolder;
+            line-height: 50px;
+            padding:0 20px;
+        }
+        form{
+            width: 25%;
+            float: right;
+            margin-right:5%;
+            margin-top: 10px;
+        }
+        form input{
+            width: 70%;
+            height: 30px;
+            border:none;
+            float: left;
+        }
+        form button{
+            width: 30%;
+            height: 30px;
+            border:none;
+            float: left;
+        }
+        .left{
+            width: 50%;
+            float: left;
+        }
+        .left img{
+            width: 100%;
+        }
+        .right{
+            width: 40%;
+            float: right;
+        }
+        .right h4{
+            padding: 10px;
+            background-color: rgb(76, 135, 153);
+        }
+        .box1 ul li{
+            background-color: #fffcf1;
+            list-style: none;
+            border-bottom: 1px solid #e0dbdf;
+            padding: 10px;
+        }
+        .box1 ul li:last-child{
+            border: none;
+        }
+        .box2{
+            margin-top: 100px;
+        }
+        .box2 ul{
+            height: 300px;
+            background-color: #fffcf1;
+        }
+        .box2 ul li{
+            list-style: none;
+            height: 70px;
+        }
+        .box2 ul li img{
+            width: 40px;
+            height: 40px;
+            padding-top: 20px;
+        }
+        .box2 .zi{
+            margin-top: -35px;
+            margin-left: 50px;
+        }
+        .box2 span{
+            color: rgb(5, 163, 255);
+        }
+        .box2 p{
+            display: inline-block;
+        }
+        footer{
+            clear: both;
+            width: 100%;
+            height: 90px;
+            margin: 0 auto;
+            text-align: center;
+            background: #000;
+            box-sizing: border-box;
+        }
+        footer .zi{
+            color: blueviolet;
+            padding-top: 20px;
+        }
+        footer .bai{
+            color: #666;
+        }
+        @media screen and (max-width:800px){
+            main{
+                width: 90%;
+            }
+            .btn{
+                display: block;
+            }
+            nav ul{
+                display: none;
+            }
+            .left{
+                float: none;
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+                float: none;
+            }
+            footer{
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>秦皇岛盛邦升华</h1>
+            <h3>盛邦升华（秦皇岛）大学生实训实习基地</h3>
+        </header>
+        <nav>
+            <button class="btn">菜单</button>
+            <ul>
+                <li>盛邦主页</li>
+                <li>关于我们</li>
+                <li>盛邦课堂</li>
+                <li>盛邦论坛</li>
+                <li>联系我们</li>
+            </ul>
+            <form action="">
+                <input type="text">
+                <button>搜索</button>
+            </form>
+        </nav>
+        <section class="clearfix">
+            <div class="left">
+                <img src="images/muji.jpg" alt="">
+                <img src="images/muji.jpg" alt="">
+                <img src="images/muji.jpg" alt="">
+            </div>
+            <div class="right">
+                <div class="box1">
+                    <h4>文章分类</h4>
+                    <ul>
+                        <li>最新消息（3）</li>
+                        <li>面试问题（5）</li>
+                        <li>技术博客（11）</li>
+                        <li>教学板块（23）</li>
+                    </ul>
+                </div>
+                <div class="box2">
+                    <h4>最新评论</h4>
+                    <ul>
+                        <li>
+                            <img src="images/face01.jpg" alt="">
+                            <div class="zi">
+                                <span>路飞</span>
+                                <p>好文章，受益匪浅</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/face02.gif" alt="">
+                            <div class="zi">
+                                <span>博小易</span>
+                                <p>好</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="images/face03.jpg" alt="">
+                            <div class="zi">
+                                <span>不倒翁</span>
+                                <p>666</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p class="zi">秦皇岛市海港区盛邦职业培训学校</p>
+            <p class="bai">Copyright&copy;2016-2018_All Rights Reserved</p>
+        </footer>
+    </main>
+</body>
+</html>
